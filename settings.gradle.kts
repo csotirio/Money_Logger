@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Money Logger"
 include(":app")
- 
+include(":data")
+include(":domain")
