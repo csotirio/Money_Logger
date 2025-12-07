@@ -23,3 +23,4 @@ rootProject.name = "Money Logger"
 include(":app")
 include(":data")
 include(":domain")
+include(":design_system")
