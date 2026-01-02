@@ -45,18 +45,34 @@ android {
 }
 
 dependencies {
+    /* Core modules */
     implementation(project(":data"))
     implementation(project(":domain"))
     implementation(project(":design_system"))
+    implementation(project(":resources"))
 
+    /* Feature modules */
+    implementation(project(":overview:api"))
+    implementation(project(":overview:impl"))
+
+    /* Dependencies */
+    //core
     implementation(libs.androidx.core.ktx)
+    implementation(libs.kotlinx.serialization.core)
+
+    //lifecycle
     implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.navigation3)
+
+    //compose
     implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
+
+    //testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -65,9 +81,10 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
+    //navigation
     implementation(libs.androidx.navigation3.ui)
     implementation(libs.androidx.navigation3.runtime)
-    implementation(libs.androidx.lifecycle.viewmodel.navigation3)
+
+    //material
     implementation(libs.androidx.material3.adaptive.navigation3)
-    implementation(libs.kotlinx.serialization.core)
 }
