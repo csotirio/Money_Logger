@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Money Logger</string>
+    <string name="overview_title">Overview</string>
+    <string name="accounts_title">Accounts</string>
+    <string name="transactions_title">Transactions</string>
+    <string name="budget_title">Budget</string>
+    <string name="analytics_title">Analytics</string>
+</resources>
