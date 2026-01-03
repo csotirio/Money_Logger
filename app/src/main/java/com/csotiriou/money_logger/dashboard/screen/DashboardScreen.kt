@@ -12,7 +12,6 @@ import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.ui.NavDisplay
 import com.csotiriou.money_logger.dashboard.dummy_data.DummyComposable
 import com.csotiriou.money_logger.dashboard.navigation_bar.composables.BottomNavigationBar
-import com.csotiriou.money_logger.dashboard.toolbar.Toolbar
 import com.csotiriou.money_logger.overview.api.OverviewEntry
 import com.csotiriou.money_logger.overview.impl.overview.overviewEntry
 import com.csotiriou.money_logger.resources.R
@@ -27,7 +26,6 @@ fun DashboardScreen() {
     val backStack = remember { mutableStateListOf<Any>(OverviewEntry) }
     Scaffold(
         modifier = Modifier.fillMaxSize(),
-        topBar = { Toolbar() },
         bottomBar = {
             BottomNavigationBar(backstack = backStack)
         },
