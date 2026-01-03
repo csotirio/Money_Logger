@@ -5,7 +5,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.sp
-import com.csotiriou.money_logger.design_system.R
+import com.csotiriou.money_logger.resources.R
 
 object MoneyLoggerFontFamily {
     val extraLight by lazy { FontFamily(Font(R.font.manrope_extra_light)) }

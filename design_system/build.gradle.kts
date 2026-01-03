@@ -40,6 +40,9 @@ android {
 }
 
 dependencies {
+    /* Core modules */
+    implementation(project(":resources"))
+
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
