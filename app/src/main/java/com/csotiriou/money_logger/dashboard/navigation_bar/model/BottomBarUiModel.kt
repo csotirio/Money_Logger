@@ -20,40 +20,46 @@ sealed class BottomBarUiModel(
 ) {
     @Serializable
     data object Overview : BottomBarUiModel(
-        iconRes = R.drawable.ic_arrow_back,
+        iconRes = R.drawable.ic_analytics,
         titleRes = R.string.overview_title,
         navigationRoute = OverviewEntry
     )
 
     @Serializable
     data object Accounts : BottomBarUiModel(
-        iconRes = R.drawable.ic_arrow_back,
+        iconRes = R.drawable.ic_wallet,
         titleRes = R.string.accounts_title,
         navigationRoute = AccountsEntry
     )
 
     @Serializable
     data object Transactions : BottomBarUiModel(
-        iconRes = R.drawable.ic_arrow_back,
+        iconRes = R.drawable.ic_transactions,
         titleRes = R.string.transactions_title,
         navigationRoute = TransactionsEntry
     )
 
     @Serializable
     data object Budget : BottomBarUiModel(
-        iconRes = R.drawable.ic_arrow_back,
+        iconRes = R.drawable.ic_budget,
         titleRes = R.string.budget_title,
         navigationRoute = BudgetEntry
     )
 
     @Serializable
     data object Analytics : BottomBarUiModel(
-        iconRes = R.drawable.ic_arrow_back,
+        iconRes = R.drawable.ic_analytics,
         titleRes = R.string.analytics_title,
         navigationRoute = AnalyticsEntry
     );
     companion object {
-        fun getItems() = listOf(Overview, Accounts, Transactions, Budget, Analytics)
+        fun getItems() = listOf(
+            Accounts,
+            Budget,
+            Overview,
+            Transactions,
+            Analytics
+        )
     }
 }
 
