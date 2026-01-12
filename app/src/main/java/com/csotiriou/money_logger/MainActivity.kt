@@ -13,7 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.csotiriou.money_logger.dashboard.screen.DashboardScreen
-import com.csotiriou.money_logger.design_system.theme.MoneyLoggerTheme
+import com.csotiriou.money_logger.core.design_system.theme.MoneyLoggerTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

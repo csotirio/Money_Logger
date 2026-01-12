@@ -9,7 +9,7 @@ import com.csotiriou.money_logger.dashboard.screen.AnalyticsEntry
 import com.csotiriou.money_logger.dashboard.screen.BudgetEntry
 import com.csotiriou.money_logger.dashboard.screen.TransactionsEntry
 import com.csotiriou.money_logger.overview.api.OverviewEntry
-import com.csotiriou.money_logger.resources.R
+import com.csotiriou.money_logger.core.resources.R
 import kotlinx.serialization.Serializable
 
 @Serializable

@@ -1,24 +1,19 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.jetbrains.kotlin.serialization)
 }
 
 android {
-    namespace = "com.csotiriou.money_logger"
+    namespace = "com.csotiriou.money_logger.core.design_system"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.csotiriou.money_logger"
         minSdk = 24
-        targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -46,33 +41,14 @@ android {
 
 dependencies {
     /* Core modules */
-    implementation(project(":data"))
-    implementation(project(":domain"))
-    implementation(project(":core:design_system"))
     implementation(project(":core:resources"))
 
-    /* Feature modules */
-    implementation(project(":features:overview:api"))
-    implementation(project(":features:overview:impl"))
-
-    /* Dependencies */
-    //core
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.kotlinx.serialization.core)
-
-    //lifecycle
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.lifecycle.viewmodel.navigation3)
-
-    //compose
     implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
-
-    //testing
+    implementation(libs.androidx.appcompat)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -80,11 +56,4 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
-
-    //navigation
-    implementation(libs.androidx.navigation3.ui)
-    implementation(libs.androidx.navigation3.runtime)
-
-    //material
-    implementation(libs.androidx.material3.adaptive.navigation3)
 }

@@ -14,7 +14,7 @@ import com.csotiriou.money_logger.dashboard.dummy_data.DummyComposable
 import com.csotiriou.money_logger.dashboard.navigation_bar.composables.BottomNavigationBar
 import com.csotiriou.money_logger.overview.api.OverviewEntry
 import com.csotiriou.money_logger.overview.impl.overview.overviewEntry
-import com.csotiriou.money_logger.resources.R
+import com.csotiriou.money_logger.core.resources.R
 
 data object AccountsEntry : NavKey
 data object TransactionsEntry : NavKey

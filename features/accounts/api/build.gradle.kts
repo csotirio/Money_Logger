@@ -1,24 +1,20 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.jetbrains.kotlin.serialization)
 }
 
 android {
-    namespace = "com.csotiriou.money_logger"
+    namespace = "com.csotiriou.money_logger.features.accounts.api"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.csotiriou.money_logger"
         minSdk = 24
-        targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -45,16 +41,6 @@ android {
 }
 
 dependencies {
-    /* Core modules */
-    implementation(project(":data"))
-    implementation(project(":domain"))
-    implementation(project(":core:design_system"))
-    implementation(project(":core:resources"))
-
-    /* Feature modules */
-    implementation(project(":features:overview:api"))
-    implementation(project(":features:overview:impl"))
-
     /* Dependencies */
     //core
     implementation(libs.androidx.core.ktx)
