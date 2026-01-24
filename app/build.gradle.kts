@@ -54,6 +54,8 @@ dependencies {
     /* Feature modules */
     implementation(project(":features:overview:api"))
     implementation(project(":features:overview:impl"))
+    implementation(project(":features:accounts:api"))
+    implementation(project(":features:accounts:impl"))
 
     /* Dependencies */
     //core

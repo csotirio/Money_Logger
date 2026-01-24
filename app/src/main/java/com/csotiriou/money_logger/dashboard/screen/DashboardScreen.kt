@@ -1,6 +1,7 @@
 package com.csotiriou.money_logger.dashboard.screen
 
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateListOf
@@ -10,13 +11,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.navigation3.runtime.NavKey
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.ui.NavDisplay
+import com.csotiriou.money_logger.core.resources.R
 import com.csotiriou.money_logger.dashboard.dummy_data.DummyComposable
 import com.csotiriou.money_logger.dashboard.navigation_bar.composables.BottomNavigationBar
-import com.csotiriou.money_logger.overview.api.OverviewEntry
-import com.csotiriou.money_logger.overview.impl.overview.overviewEntry
-import com.csotiriou.money_logger.core.resources.R
+import com.csotiriou.money_logger.features.accounts.impl.accountsEntry
+import com.csotiriou.money_logger.features.overview.api.OverviewEntry
+import com.csotiriou.money_logger.features.overview.impl.overview.overviewEntry
 
-data object AccountsEntry : NavKey
 data object TransactionsEntry : NavKey
 data object BudgetEntry : NavKey
 data object AnalyticsEntry : NavKey
@@ -29,15 +30,14 @@ fun DashboardScreen() {
         bottomBar = {
             BottomNavigationBar(backstack = backStack)
         },
-    ) {
+    ) { contentPadding ->
         NavDisplay(
             backStack = backStack,
+            modifier = Modifier.fillMaxSize().padding(contentPadding),
             onBack = { backStack.removeLastOrNull() },
             entryProvider = entryProvider {
                 overviewEntry()
-                entry(AccountsEntry) {
-                    DummyComposable(stringResource(R.string.accounts_title))
-                }
+                accountsEntry()
                 entry(TransactionsEntry) {
                     DummyComposable(stringResource(R.string.transactions_title))
                 }

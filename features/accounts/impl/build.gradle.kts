@@ -41,6 +41,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":features:accounts:api"))
     /* Dependencies */
     //core
     implementation(libs.androidx.core.ktx)

@@ -4,12 +4,12 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.runtime.saveable.Saver
 import androidx.navigation3.runtime.NavKey
-import com.csotiriou.money_logger.dashboard.screen.AccountsEntry
+import com.csotiriou.money_logger.core.resources.R
 import com.csotiriou.money_logger.dashboard.screen.AnalyticsEntry
 import com.csotiriou.money_logger.dashboard.screen.BudgetEntry
 import com.csotiriou.money_logger.dashboard.screen.TransactionsEntry
-import com.csotiriou.money_logger.overview.api.OverviewEntry
-import com.csotiriou.money_logger.core.resources.R
+import com.csotiriou.money_logger.features.accounts.api.AccountsEntry
+import com.csotiriou.money_logger.features.overview.api.OverviewEntry
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -51,7 +51,7 @@ sealed class BottomBarUiModel(
         iconRes = R.drawable.ic_analytics,
         titleRes = R.string.analytics_title,
         navigationRoute = AnalyticsEntry
-    );
+    )
     companion object {
         fun getItems() = listOf(
             Accounts,

@@ -1,4 +1,4 @@
-package com.csotiriou.money_logger.features.overview.impl.overview.composable
+package com.csotiriou.money_logger.features.accounts.impl.composables
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -8,11 +8,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 
 @Composable
-fun OverviewContent() {
+fun AccountContent() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.Green)
+            .background(Color.Red)
     ) {
 
     }

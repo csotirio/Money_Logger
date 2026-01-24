@@ -1,2 +1,2 @@
-package com.csotiriou.money_logger.overview.impl.overview
+package com.csotiriou.money_logger.features.overview.impl.overview
 
